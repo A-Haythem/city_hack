@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const User = require('../models/User');
-const{registrationValidation,loginValidation} = require('../validation')
+const{registrationValidation,loginValidation} = require('../middleware/validation')
 
 router.post('/register', async (req,res)=>{
     const {password,password2,email,username}= req.body
