@@ -27,7 +27,7 @@ router.post('/register', async (req,res)=>{
         }
 
     }else{
-        return res.status(400).json({error:"the password is not identical"})
+        return res.status(400).json({error:"the passwords do not match"})
    
 }});
 
