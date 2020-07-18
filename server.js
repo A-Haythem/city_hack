@@ -1,11 +1,11 @@
 const express = require("express")
-
-const mongoose = require("mongoose")
 const app = express()
 const port = 1234
-
+const mongoose = require("mongoose")
 const authRoute= require('./routes/auth');
-mongoose.connect("mongodb+srv://laclass:laclass11213@cluster0.qdfum.mongodb.net/root?retryWrites=true&w=majority",{
+
+
+mongoose.connect("mongodb+srv://kellan:test123@cluster0.gslw5.mongodb.net/test?retryWrites=true&w=majority",{
     useUnifiedTopology: true,
     useNewUrlParser: true
 
@@ -23,4 +23,3 @@ app.use('/api/user', authRoute)
 app.listen(port,()=>{
     console.log("connecting to port: ",port)
 })
-
